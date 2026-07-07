@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "outputDirectory": "ui/dist",
+  "buildCommand": "pnpm --filter @paperclipai/db build && pnpm --filter @paperclipai/shared build && pnpm --filter @paperclipai/ui build && pnpm --filter @paperclipai/server build && node scripts/vercel-bundle.mjs",
+  "installCommand": "pnpm install --frozen-lockfile",
+  "framework": null,
+  "functions": {
+    "api/index.js": {
+      "maxDuration": 60,
+      "memory": 1024
+    }
+  },
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/api/index.js" }
+  ],
+  "env": {
+    "PAPERCLIP_DEPLOYMENT_MODE": "authenticated",
+    "PAPERCLIP_DEPLOYMENT_EXPOSURE": "public",
+    "SERVE_UI": "true",
+    "NODE_ENV": "production"
+  }
+}

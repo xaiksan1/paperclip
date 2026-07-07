@@ -1,0 +1,21 @@
+{
+  "name": "@paperclipai/deploy-workflow",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "nitro dev",
+    "build": "nitro build",
+    "start": "node .output/server/index.mjs",
+    "trigger": "node scripts/trigger.mjs"
+  },
+  "dependencies": {
+    "express": "^4.21.0",
+    "nitro": "latest",
+    "rollup": "^4.0.0",
+    "workflow": "^4.5.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "typescript": "^5.7.3"
+  }
+}

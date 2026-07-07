@@ -1,0 +1,24 @@
+{
+  "mcpServers": {
+    "ghostdesk": {
+      "type": "http",
+      "url": "http://localhost:3000/mcp"
+    },
+    "chrome-devtools": {
+      "command": "bun",
+      "args": ["/home/ichigo/alexandria/ADAM/MCP/chrome-devtools-mcp/build/src/bin/chrome-devtools-mcp.js"]
+    },
+    "instant-lee": {
+      "type": "http",
+      "url": "http://localhost:4112"
+    },
+    "seshat": {
+      "type": "http",
+      "url": "http://localhost:5013/mcp"
+    },
+    "pheromone": {
+      "type": "sse",
+      "url": "http://localhost:5012"
+    }
+  }
+}
